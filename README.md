@@ -1,4 +1,4 @@
 # ChanceApp
 
 ## HomeScreen UI
-![](./assets/HomeScreen.jpg = 50x75)
+![](./assets/HomeScreen.jpg =150x)
