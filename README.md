@@ -1,4 +1,5 @@
 # ChanceApp
 
 ## HomeScreen UI
-![](./assets/HomeScreen.jpg =150x)
+
+<img src="./assets/HomeScreen.jpg" width="150" height="200" />
