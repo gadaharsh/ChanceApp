@@ -10,13 +10,18 @@ import {
 import React from "react";
 import icon from "../assets/Wavy_Lst-01_Single-11.jpg";
 import appName from "../assets/appName.png";
-import arrow from "../assets/next64.png";
+import arrow from "../assets/next32.png";
 
 const HomeScreen = () => {
 
   const { height } = useWindowDimensions();
+
   const onPressNext = () => {
     console.warn("Clicked Next Button");
+  }
+
+  const onPressSignin = () => {
+      console.warn("Clicked Signin")
   }
 
   return (
@@ -40,7 +45,7 @@ const HomeScreen = () => {
             If you were a fruit, then you would be a fine-apple
           </Text>
           <Text style={styles.heading3}>
-            Already a user? Try <Text style={styles.signin}>Signing In</Text>
+            Already a user? Try <Text onPress={onPressSignin} style={styles.signin}>Signing In</Text>
           </Text>
         </View>
       </View>
@@ -91,6 +96,7 @@ const styles = StyleSheet.create({
   },
   lowerSection: {
     flex: 1,
+    alignContent: "center"
   },
   heading1: {
     fontSize: 38,
@@ -134,9 +140,10 @@ const styles = StyleSheet.create({
     borderRadius: 65,
   },
   arrow:{
-    width:"120%",
-    height: "120%",
+    // width:"120%",
+    // height: "120%",
 
     // marginVertical: "%",
+    
 }
 });
