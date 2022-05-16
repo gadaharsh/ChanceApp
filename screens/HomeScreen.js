@@ -20,7 +20,7 @@ const HomeScreen = () => {
           resizeMode="cover"
           style={[styles.icon, { height: height * 0.5 }]}
         >
-          <Image source={appName} />
+          <Image source={appName} style={styles.chance} />
         </ImageBackground>
       </View>
 
@@ -31,7 +31,7 @@ const HomeScreen = () => {
         <Text style={styles.heading2}>
           If you were a fruit, then you would be a fine-apple
         </Text>
-        <Text style={styles.heading3}>Already a user? Try Signing In</Text>
+        <Text style={styles.heading3}>Already a user? Try <Text style={styles.signin}>Signing In</Text></Text>
       </View>
     </View>
   );
@@ -65,16 +65,20 @@ const styles = StyleSheet.create({
   },
   upperSection: {
     // backgroundColor: '#E8F2F6',
-    flex: 1,
+    // height: "40%",
+    // flex: 1,
     borderBottomColor: "#E8F2F6",
     borderBottomWidth: 3,
+    borderBottomStartRadius: 50,
+    borderBottomEndRadius: 50,
+    // borderRadius: "20%",
   },
   lowerSection: {
     flex: 1,
   },
   heading1: {
-    fontSize: 36,
-    // fontWeight: "bold",
+    fontSize: 38,
+    fontWeight: "bold",
     marginHorizontal: "5%",
 
     paddingVertical: "5%",
@@ -92,5 +96,16 @@ const styles = StyleSheet.create({
     paddingVertical: "2%",
     marginHorizontal: "5%",
     // paddingHorizontal: "5%",
+  },
+  chance: {
+    marginTop: "68%",
+    height: "60%",
+    width: "60%",
+    marginHorizontal: "20%",
+    resizeMode: "contain",
+  },
+  signin: {
+    color: "#87B2E5",
+    fontWeight: "bold",
   },
 });
