@@ -5,13 +5,20 @@ import {
   View,
   Image,
   useWindowDimensions,
+  TouchableOpacity,
 } from "react-native";
 import React from "react";
 import icon from "../assets/Wavy_Lst-01_Single-11.jpg";
 import appName from "../assets/appName.png";
+import arrow from "../assets/next64.png";
 
 const HomeScreen = () => {
+
   const { height } = useWindowDimensions();
+  const onPressNext = () => {
+    console.warn("Clicked Next Button");
+  }
+
   return (
     <View style={styles.container}>
       <View style={styles.upperSection}>
@@ -25,14 +32,23 @@ const HomeScreen = () => {
       </View>
 
       <View style={styles.lowerSection}>
-        <Text style={styles.heading1}>
-          The personality first connecting app
-        </Text>
-        <Text style={styles.heading2}>
-          If you were a fruit, then you would be a fine-apple
-        </Text>
-        <Text style={styles.heading3}>Already a user? Try <Text style={styles.signin}>Signing In</Text></Text>
+        <View>
+          <Text style={styles.heading1}>
+            The personality first connecting app
+          </Text>
+          <Text style={styles.heading2}>
+            If you were a fruit, then you would be a fine-apple
+          </Text>
+          <Text style={styles.heading3}>
+            Already a user? Try <Text style={styles.signin}>Signing In</Text>
+          </Text>
+        </View>
       </View>
+      <TouchableOpacity onPress={onPressNext}>
+        <View style={styles.button}>
+          <Image source={arrow} style={styles.arrow} />
+        </View>
+      </TouchableOpacity>
     </View>
   );
 };
@@ -68,7 +84,7 @@ const styles = StyleSheet.create({
     // height: "40%",
     // flex: 1,
     borderBottomColor: "#E8F2F6",
-    borderBottomWidth: 3,
+    borderBottomWidth: 5,
     borderBottomStartRadius: 50,
     borderBottomEndRadius: 50,
     // borderRadius: "20%",
@@ -108,4 +124,19 @@ const styles = StyleSheet.create({
     color: "#87B2E5",
     fontWeight: "bold",
   },
+  button: {
+    backgroundColor: "#E8F2F6",
+    margin: "20%",
+    marginLeft: "40%",
+    padding: "5%",
+    height: 65,
+    width: 65,
+    borderRadius: 65,
+  },
+  arrow:{
+    width:"120%",
+    height: "120%",
+
+    // marginVertical: "%",
+}
 });
